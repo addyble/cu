@@ -12,6 +12,16 @@ with open("model/customer_churn_model.pkl", "rb") as f:
 with open("model/model_schema.pkl", "rb") as f:
     schema = pickle.load(f)
 
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({
+        "message": "Churn Prediction API is running",
+        "endpoints": {
+            "GET /features-template": "Get example JSON payload structure",
+            "POST /predict": "Predict churn probability"
+        }
+    })
+
 @app.route("/features-template", methods=["GET"])
 def features_template():
     """Returns a JSON example with correct types for Postman testing."""
