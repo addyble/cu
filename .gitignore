@@ -1,0 +1,17 @@
+# Ignore dataset folder if it exists
+data/*
+!data/.gitkeep
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore virtual environments
+.venv/
+venv/
+env/
+
+# Ignore notebooks checkpoints
+.ipynb_checkpoints/
+train_model.py
