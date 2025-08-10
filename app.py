@@ -1,9 +1,12 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import pandas as pd
 import pickle
 import numpy as np
 
 app = Flask(__name__)
+# Allow all origins during dev (you can restrict later)
+CORS(app)
 
 # Load model and schema
 with open("model/customer_churn_model.pkl", "rb") as f:
