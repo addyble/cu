@@ -1,9 +1,4 @@
-# Python dependencies for local ML experiments
-numpy
+Flask==2.3.2
 pandas
 scikit-learn
-matplotlib
-seaborn
-jupyter
-kaggle
-flask
+gunicorn
